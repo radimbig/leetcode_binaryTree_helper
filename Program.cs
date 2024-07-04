@@ -14,29 +14,6 @@
  * }
  */
 
-    public class Solution
-    {
-        public int MaxDepth(TreeNode root)
-        {
-            if(root == null) return 0;
-            if(root.left == null && root.right == null) return 1;
-
-            int maxDepth = MaxDepthRecursive(root, 1);
-
-            return maxDepth;
-
-        }
-        public int MaxDepthRecursive(TreeNode root, int countedDepth)
-        {
-            if(root == null) return 0;
-            if(root.left == null && root.right == null) return 1;
-
-            int leftMax = MaxDepthRecursive(root.left, countedDepth: countedDepth);
-            int RightMax = MaxDepthRecursive(root.right, countedDepth: countedDepth);
-            
-            return Math.Max(leftMax, RightMax);
-        }
-    }
     
     
 
